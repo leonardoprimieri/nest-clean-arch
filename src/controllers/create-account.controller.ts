@@ -48,6 +48,10 @@ export class CreateAccountController {
       },
     });
 
-    return createdAccount;
+    return {
+      id: createdAccount.id,
+      email: createdAccount.email,
+      name: createdAccount.name,
+    };
   }
 }
