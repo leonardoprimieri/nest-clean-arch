@@ -1,4 +1,5 @@
 @baseUrl = http://localhost:3339
+@authToken = {{authenticate.response.body.access_token}}
 
 # @name create_account
 POST {{baseUrl}}/accounts
@@ -24,4 +25,4 @@ Content-Type: application/json
 # @name create_question
 POST {{baseUrl}}/questions
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyOWRjMjlhNC03ZTNmLTQ1NjQtODJjNy1jYWE2NGQ2MDdlYTAiLCJpYXQiOjE3MDM1OTg4MTB9.SZQDjUF8PcJNBdQeJ3S5Zd3kdH7tkNOd7qQBSQp-kFV_D1PcQXZkwAlMA_fBqEX1IATdD8ItGjvIU2wAAzIiP_hJOm3QUC4hY1tJqwz5YWkhX20j0JYTnkxlJSZmmd1BtVCLA0bqm37C8gZg4OPb6gefWwNgI4UNddA_iJkweEzIy7EKQnut0H-UgGu4i567vP7GA0or3m_ois6PzwrlCoR11RLrJX66Gm9DifMzmoKLbtHwHjfxV2bSbGH7chIRR_v4hAPlK5GgrQoxD6zdPpRP25Q7tfwVP6G5JRyog7M6lKVaJprdPRRd486qklqdseeqN6xZM37dp8_6PvCMNA
+Authorization: Bearer {{authToken}}
