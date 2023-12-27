@@ -13,7 +13,12 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "clear-cache": "rm -rf dist && rm -rf node_modules && rm -rf pnpm-lock.yaml"
+    "clear-cache": "rm -rf dist && rm -rf node_modules && rm -rf pnpm-lock.yaml",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:debug": "vitest --inspect-brk --inspect --logHeapUsage --threads=false",
+    "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
