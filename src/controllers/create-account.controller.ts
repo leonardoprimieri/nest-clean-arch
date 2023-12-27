@@ -28,13 +28,13 @@ export class CreateAccountController {
   @Post()
   @UsePipes(new ZodValidationPipe(createAccountBodySchema))
   async handle(@Body() { email, name, password }: CreateAccountBody) {
-    const alreadyHasUserRegistered = await this.prismaService.user.findUnique({
+    const alreadyRegisteredUser = await this.prismaService.user.findUnique({
       where: {
         email,
       },
     });
 
-    if (alreadyHasUserRegistered) {
+    if (alreadyRegisteredUser) {
       throw new ConflictException('E-mail already registered');
     }
 
