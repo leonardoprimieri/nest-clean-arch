@@ -31,3 +31,9 @@ Authorization: Bearer {{authToken}}
   "title": "Teste com caracters especiais çcerto 123 leão",
   "content": "descrição legal"
 }
+
+###
+# @name fetch_recent_questions
+GET {{baseUrl}}/questions
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
